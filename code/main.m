@@ -14,9 +14,9 @@ if isfolder('../data')
     base_data_dir = '../data';
     base_results_dir = '../results';
 
-    mkdir(base_results_dir + '/nums');
-    mkdir(base_results_dir + '/svgs');
-    mkdir(base_results_dir + '/figs');
+    mkdir(base_results_dir + "/nums");
+    mkdir(base_results_dir + "/svgs");
+    mkdir(base_results_dir + "/figs");
 
 elseif isfolder('data') 
     % We are running from the repository root locally
