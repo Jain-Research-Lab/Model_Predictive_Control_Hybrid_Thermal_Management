@@ -45,11 +45,11 @@ set(0,'defaultAxesGridLineStyle','-.')
 set(groot, 'defaultLegendBox', 'off')
 
 % Load Simulated Data
-load data_EXP.mat
+load(base_results_dir + "/nums/data_EXP.mat")
 
 % Load Experimental Data
-load sysMPC_Hybrid.mat
-load sysMPC_NonHybrid.mat
+load(base_results_dir + "/nums/sysMPC_Hybrid.mat")
+load(base_results_dir + "/nums/sysMPC_NonHybrid.mat")
 
 % Define Colors
 CP_Color = "black";
@@ -246,7 +246,7 @@ for i = 1:n
 end
 
 %% Save as PDFs
-pdf_folder = "results/figs/";
+pdf_folder = base_results_dir + "/figs/";
 
 pdf_list = ["heat_load_plain", "sim_dash", "timing", "exp_dash", "qdot_exp", ...
     "tes_contribution", "tcp_tes_vs_small", "mp_tes_vs_small", "est_soc"];
