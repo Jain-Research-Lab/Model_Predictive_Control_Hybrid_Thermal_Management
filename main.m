@@ -10,7 +10,7 @@ nmp_MPC = 1;
 
 %% Parse Experiment Data
 date = "05_20_24";
-data_folder = "hybrid_experiment_05_20_24_EXP";
+data_folder = "data/hybrid_experiment_05_20_24_EXP";
 data.id.ts = 0.1;                      % DAQ sample time, [s]
 data.id.dt_input = 10;                 % Amount of time each input is applied [s]
 data.p.R_HEATER = 60;                  % [Ohm]
@@ -20,10 +20,10 @@ data.id.ns = [5000];                    % number of samples for each data set
 data.id.data_delimiter = [50];         % unique id for each dataset
 
 sysMPC_Hybrid = main_parse(date, data_folder, data, varTMS);
-save("Experiment_Simulation_Data/nums/sysMPC_Hybrid.mat","sysMPC_Hybrid");
+save("results/nums/sysMPC_Hybrid.mat","sysMPC_Hybrid");
 
 date = "05_23_24";
-data_folder = "nonhybrid_experiment_05_23_24_EXP";
+data_folder = "data/nonhybrid_experiment_05_23_24_EXP";
 data.id.ts = 0.1;                      % DAQ sample time, [s]
 data.id.dt_input = 10;                 % Amount of time each input is applied [s]
 data.p.R_HEATER = 60;                  % [Ohm]
@@ -33,11 +33,11 @@ data.id.ns = [5000];                   % number of samples for each data set
 data.id.data_delimiter = [50];         % unique id for each dataset
 
 sysMPC_NonHybrid = main_parse(date, data_folder, data, varTMS);
-save("Experiment_Simulation_Data/nums/sysMPC_NonHybrid.mat","sysMPC_NonHybrid");
+save("results/nums/sysMPC_NonHybrid.mat","sysMPC_NonHybrid");
 
 %% Run Simulation
 data_EXP = main_EXP(varTMS, vTMS);
-save("Experiment_Simulation_Data/nums/data_EXP.mat","data_EXP")
+save("results/nums/data_EXP.mat","data_EXP")
 
 %% Get Figures
 main_plot;

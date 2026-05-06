@@ -234,7 +234,7 @@ ylabel("Average SOC")
 ylim([0 1.2])
 
 %% Save as SVGs
-svg_folder = "Experiment_Simulation_Data/svgs/";
+svg_folder = "results/svgs/";
 
 svg_list = ["heat_load_plain", "sim_dash", "timing", "exp_dash", "qdot_exp", ...
     "tes_contribution", "tcp_tes_vs_small","mp_tes_vs_small", "est_soc"];
@@ -246,7 +246,7 @@ for i = 1:n
 end
 
 %% Save as PDFs
-pdf_folder = "Figures/";
+pdf_folder = "results/Figures/";
 
 pdf_list = ["heat_load_plain", "sim_dash", "timing", "exp_dash", "qdot_exp", ...
     "tes_contribution", "tcp_tes_vs_small", "mp_tes_vs_small", "est_soc"];
