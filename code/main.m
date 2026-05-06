@@ -13,6 +13,11 @@ if isfolder('../data')
     % We are running from inside a 'code' folder locally
     base_data_dir = '../data';
     base_results_dir = '../results';
+
+    mkdir(base_results_dir + '/nums');
+    mkdir(base_results_dir + '/svgs');
+    mkdir(base_results_dir + '/figs');
+
 elseif isfolder('data') 
     % We are running from the repository root locally
     base_data_dir = 'data';

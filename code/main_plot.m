@@ -246,7 +246,7 @@ for i = 1:n
 end
 
 %% Save as PDFs
-pdf_folder = "results/Figures/";
+pdf_folder = "results/figs/";
 
 pdf_list = ["heat_load_plain", "sim_dash", "timing", "exp_dash", "qdot_exp", ...
     "tes_contribution", "tcp_tes_vs_small", "mp_tes_vs_small", "est_soc"];
